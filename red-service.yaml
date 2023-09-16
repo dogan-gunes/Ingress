@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: red
+  name: red-service
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: red
+  type: ClusterIP

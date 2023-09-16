@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: red
+  name: red
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: red
+  template:
+    metadata:
+      labels:
+        app: red
+    spec:
+      containers:
+      - image: dgngns/red:0.0.1
+        name: red
